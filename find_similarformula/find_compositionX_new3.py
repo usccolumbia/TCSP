@@ -6,7 +6,7 @@ import pandas as pd
 import multiprocessing as mp
 
 def load_embeddings():
-    with open('../matscholar-embedding.json', 'r') as file:
+    with open('../data/matscholar-embedding.json', 'r') as file:
         return json.load(file)
 
 embeddings = load_embeddings()
