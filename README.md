@@ -83,6 +83,10 @@ An example to predict a single crystal structure SrTiO3. You can set different a
 python main.py --input SrTiO3
 ```
 
+check the predicted results in output dir.
+files named by score_energy_spacegroup_templateFormula_templateSource.cif
+e.g. 1.396_-8.15_sg123_La1U1O4_mp-753581.cif
+
 An example to predict multiple crystal structures in a csv file (e.g. 180_testdata.csv). 
 
 ```
