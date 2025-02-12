@@ -10,8 +10,10 @@ Our TCSP 1.0: https://pubs.acs.org/doi/full/10.1021/acs.inorgchem.1c03879
 ### Python Dependencies
 You can install all the dependencies listed inside using the following command:
 ```
-pip install -r requirements.txt
+conda env create -f tcsp_environment.yml
 ```
+pip install -r requirements.txt
+
 ### BERTOS utility
 BERTOS: transformer language model for oxidation state prediction
 You can download it in the github
