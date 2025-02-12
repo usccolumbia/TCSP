@@ -33,7 +33,8 @@ TCSP/
       ├── ...
       ├── bertos.py
    ├── database/
-   ├── predict_template.py
+   ├── main.py
+   ├── utils.py
    ├── ...
    ├── requirements.txt     # Python dependencies
    └── README.md
@@ -60,7 +61,7 @@ TCSP/
        ├── mixed_data4.csv
        ├── mixed_data4/
            └── cif files
-   ├── predict_template.py
+   ├── main.py
    ├── utils.py
    ├── requirements.txt     # Python dependencies
    └── README.md
