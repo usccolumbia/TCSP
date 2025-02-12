@@ -13,15 +13,20 @@ You can install all the dependencies listed inside using the following command:
 cd TCSP
 conda env create -f tcsp_environment.yml
 ```
-pip install -r requirements.txt
 
+Activate the tcsp env and install chgnet.
+```
+conda activate tcsp
+pip install chgnet
+pip install transformers
+```
 ### BERTOS utility
 BERTOS: transformer language model for oxidation state prediction
-You can download it in the github
+```
+python download_bertos.py
+```
 
-Link: https://github.com/usccolumbia/BERTOS
-
-or you can download if from [Figshare](https://figshare.com/articles/journal_contribution/BERTOS/28379117)
+If the script doesnt work. You can download if manually from [Figshare](https://figshare.com/articles/journal_contribution/BERTOS/28379117)
 
 Download BERTOS from the above link, then extract it.
 After the above, the directory should be:
@@ -33,11 +38,10 @@ TCSP/
       ├── dataset/
       ├── ...
       ├── bertos.py
-   ├── database/
+   ├── data/
    ├── main.py
    ├── utils.py
    ├── ...
-   ├── requirements.txt     # Python dependencies
    └── README.md
 ```
 
@@ -48,8 +52,11 @@ All above datasets can be downloaded from [Figshare](https://figshare.com/articl
 
 
 #### Download Data
-Download datasets from the above link, then extract it.
-After the above, the directory should be:
+```
+python download_database.py
+```
+If you cannot use the above script, you can download datasets from the above link manually, then extract it.
+The directory should be:
 ```
 TCSP/
    ├── BERTOS/  
@@ -58,19 +65,22 @@ TCSP/
       ├── dataset/
       ├── ...
       ├── bertos.py
-   ├── database/
-       ├── mixed_data4.csv
+   ├── data/
+       ├── matscholar-embedding.json
+       ├── element_dissimilarity.pkl
+       ├── structures.tar.gz
+       ├── data.csv                    #all information for 731,293 cif files
        ├── mixed_data4/
-           └── cif files
+           └── 731,293 cif files
    ├── main.py
    ├── utils.py
-   ├── requirements.txt     # Python dependencies
+   ├── ...
    └── README.md
 ```
 #### How to use TCSP 2.0
 An example to predict a single crystal structure SrTiO3. You can set different argsparse.
 ```
-python predict_template.py --input SrTiO3
+python main.py --input SrTiO3
 ```
 
 An example to predict multiple crystal structures in a csv file (e.g. 180_testdata.csv). 
