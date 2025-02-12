@@ -33,7 +33,7 @@ def input_parser():
     parser = argparse.ArgumentParser(description="e-above-hull energy calculation using pymatgen")
     parser.add_argument("--input", type=str, default="NdOsO4", help="query formula")
     parser.add_argument("--templatelist", type=str, default="./templatecifs.csv", help="template CIF list")
-    parser.add_argument("--templatedir", type=str, default="/home/weilai/TCSP-v2/database/hybird_data/mixed_data4", help="CIFs folder")
+    parser.add_argument("--templatedir", type=str, default="data/mixed_data4", help="CIFs folder")
     parser.add_argument("--outputdir", type=str, default="./output", help="Output directory")
     parser.add_argument("--topn", type=int, default=5, help="Number of template structure predictions")
     parser.add_argument("--output", type=str, default="./results.csv", help="Output result file path")
@@ -45,7 +45,7 @@ args = input_parser()
 formula = args.input
 
 # Define paths
-TEMPLATE_LIST_FILE = '/home/weilai/TCSP-v2/database/hybird_data/mixed_data4.csv'
+TEMPLATE_LIST_FILE = 'data/data.csv'
 TEMPLATE_CANDIDATES_FILE = 'templateCandidates.csv'
 
 # Step 1: Find formulas with the same anonymized format

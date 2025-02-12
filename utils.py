@@ -15,7 +15,6 @@ from pymatgen.symmetry.analyzer import SpacegroupAnalyzer
 from pymatgen.io.cif import CifWriter
 from chgnet.model import StructOptimizer
 from BERTOS.bertos import guess_os
-from ElMD import ElMD
 
 # Suppress warnings
 for category in (UserWarning, DeprecationWarning):
@@ -24,7 +23,7 @@ for category in (UserWarning, DeprecationWarning):
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 # Load element dissimilarity data
-with open("element_dissimilarity.pkl", 'rb') as f:
+with open("data/element_dissimilarity.pkl", 'rb') as f:
     element_dissimilarity = pickle.load(f)
 
 # List of elements
@@ -52,7 +51,7 @@ def pair_distance(pair_list):
 
 def pair_euclidean_distance(pair_list):
     """Calculate Euclidean distance between element pairs based on embeddings."""
-    with open('matscholar-embedding.json', 'r') as file:
+    with open('data/matscholar-embedding.json', 'r') as file:
         data = json.load(file)
     
     total_score, space_group_diff = 0, 0
