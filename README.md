@@ -10,6 +10,7 @@ Our TCSP 1.0: https://pubs.acs.org/doi/full/10.1021/acs.inorgchem.1c03879
 ### Python Dependencies
 You can install all the dependencies listed inside using the following command:
 ```
+cd TCSP
 conda env create -f tcsp_environment.yml
 ```
 pip install -r requirements.txt
