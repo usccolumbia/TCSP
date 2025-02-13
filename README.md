@@ -8,13 +8,13 @@ by <a href="http://mleg.cse.sc.edu" target="_blank">Machine Learning and Evoluti
 Our TCSP 1.0: https://pubs.acs.org/doi/full/10.1021/acs.inorgchem.1c03879
 
 ### Python Dependencies
-You can install all the dependencies listed inside using the following command:
+You can install all dependencies using the following command:
 ```
 cd TCSP
 conda env create -f tcsp_environment.yml
 ```
 
-Activate the tcsp env and install chgnet.
+Activate the tcsp environment and install chgnet, transformers.
 ```
 conda activate tcsp
 pip install chgnet
@@ -28,8 +28,7 @@ python download_bertos.py
 
 If the script doesnt work. You can download if manually from [Figshare](https://figshare.com/articles/journal_contribution/BERTOS/28379117)
 
-Download BERTOS from the above link, then extract it.
-After the above, the directory should be:
+After downloading and extracting BERTOS, the directory structure should be:
 ```
 TCSP/
    ├── BERTOS/  
@@ -55,8 +54,8 @@ All above datasets can be downloaded from [Figshare](https://figshare.com/articl
 ```
 python download_database.py
 ```
-If you cannot use the above script, you can download datasets from the above link manually, then extract it.
-The directory should be:
+If you cannot use the script above, you can manually download the datasets from the link and extract them.
+The directory structure should be:
 ```
 TCSP/
    ├── BERTOS/  
@@ -78,29 +77,33 @@ TCSP/
    └── README.md
 ```
 #### How to use TCSP 2.0
-An example to predict a single crystal structure SrTiO3. You can set different argsparse.
+Here is an example of predicting a single crystal structure for SrTiO₃. You can modify the arguments using argparse:
 ```
 python main.py --input SrTiO3
 ```
 
-check the predicted results in output dir.
-files named by score_energy_spacegroup_templateFormula_templateSource.cif
+Check the predicted results in the output directory.
+The output files are named using the format:
+score_energy_spacegroup_templateFormula_templateSource.cif
+Example:
 e.g. 1.396_-8.15_sg123_La1U1O4_mp-753581.cif
 
-An example to predict multiple crystal structures in a csv file (e.g. 180_testdata.csv). 
+To predict multiple crystal structures from a CSV file (e.g., data/180_testdata.csv):
 
 ```
 python process_formulas.py 
 ```
 
-If you want to collect the results for multiple CSP.
+If you want to collect the top-1 output of all results for multiple CSP runs:
 ```
 python collect_results.py 
 ```
 
 #### How to evaluate your predicted structures
 
-If you want to evaluate the performance or compare the results to the ground truth structures. (Here we use pymatgen StructureMatcher, Space Group Match, and Consensus Rates)
+To evaluate performance or compare results with ground truth structures, we use pymatgen StructureMatcher, Space Group Matching, and Consensus Rates.
+
+Ensure you have the ground truth structure files with corresponding names before running the evaluation:
 ```
 python comp_success.py
 ```
@@ -115,4 +118,12 @@ If you use our work, please cite:
 
 
 ### Reference
+Fu, Nihang, Jeffrey Hu, Ying Feng, Gregory Morrison, Hans‐Conrad zur Loye, and Jianjun Hu. "Composition Based Oxidation State Prediction of Materials Using Deep Learning Language Models." Advanced Science 10, no. 28 (2023): 2301011.
 
+Jain, Anubhav, Shyue Ping Ong, Geoffroy Hautier, Wei Chen, William Davidson Richards, Stephen Dacek, Shreyas Cholia et al. "Commentary: The Materials Project: A materials genome approach to accelerating materials innovation." APL materials 1, no. 1 (2013).
+
+Talirz, Leopold, Snehal Kumbhar, Elsa Passaro, Aliaksandr V. Yakutovich, Valeria Granata, Fernando Gargiulo, Marco Borelli et al. "Materials Cloud, a platform for open computational science." Scientific data 7, no. 1 (2020): 299.
+
+Gjerding, Morten Niklas, Alireza Taghizadeh, Asbjørn Rasmussen, Sajid Ali, Fabian Bertoldo, Thorsten Deilmann, Nikolaj Rørbæk Knøsgaard et al. "Recent progress of the computational 2D materials database (C2DB)." 2D Materials 8, no. 4 (2021): 044002.
+
+Merchant, Amil, Simon Batzner, Samuel S. Schoenholz, Muratahan Aykol, Gowoon Cheon, and Ekin Dogus Cubuk. "Scaling deep learning for materials discovery." Nature 624, no. 7990 (2023): 80-85.
