@@ -105,9 +105,9 @@ class ResultCollector:
 
 def main():
     parser = argparse.ArgumentParser(description="Collect and organize TCSP results")
-    parser.add_argument('--input', default='/home/weilai/TCSP-v2/TCSP_new2_output5_top5',
+    parser.add_argument('--input', default='TCSP_180data',
                       help="Input directory containing formula subdirectories")
-    parser.add_argument('--output', default='/home/weilai/TCSP-v2/TCSP_new2_output5_top5_clean',
+    parser.add_argument('--output', default='TCSP_180data_top5_clean',
                       help="Output directory for organized results")
     args = parser.parse_args()
 

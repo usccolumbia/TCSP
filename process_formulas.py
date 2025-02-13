@@ -37,7 +37,7 @@ def process_formulas(csv_file, output_base_dir, force=False):
             os.makedirs(output_dir, exist_ok=True)
             
             # Run prediction command
-            command = f'python3 ./predict_template_new4.py --input "{formula}" --outputdir "{output_dir}" --topn 5'
+            command = f'python3 ./main.py --input "{formula}" --outputdir "{output_dir}" --topn 5'
             print(f"Running command: {command}")
             
             if os.system(command) == 0:
@@ -58,9 +58,9 @@ def process_formulas(csv_file, output_base_dir, force=False):
 def main():
     parser = argparse.ArgumentParser(description="Process multiple formulas from a CSV file")
     parser.add_argument('--force', action='store_true', help="Force reprocessing of all formulas")
-    parser.add_argument('--csv', default='/home/weilai/TCSP-v2/primitive_180_testdata.csv', 
+    parser.add_argument('--csv', default='data/180_testdata.csv', 
                       help="Path to CSV file containing formulas")
-    parser.add_argument('--output', default='TCSP_new2_output5_top5',
+    parser.add_argument('--output', default='TCSP_180data',
                       help="Base output directory")
     args = parser.parse_args()
 
