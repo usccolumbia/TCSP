@@ -1,7 +1,8 @@
 # TCSP2.0
 This repository contains the code and datasets for the paper:
 
-xxxx
+Wei, Lai, Rongzhi Dong, Nihang Fu, Sadman Sadeed Omee, and Jianjun Hu. "TCSP 2.0: Template based crystal structure prediction with improved oxidation state prediction and chemistry heuristics." Computational Materials Science 261 (2026): 114317.
+
 
 by <a href="http://mleg.cse.sc.edu" target="_blank">Machine Learning and Evolution Laboratory</a>, University of South Carolina.
 
