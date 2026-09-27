@@ -114,7 +114,7 @@ python comp_success.py
 If you use our work, please cite:
 
 ```bibtex
-
+Wei, Lai, Rongzhi Dong, Nihang Fu, Sadman Sadeed Omee, and Jianjun Hu. "TCSP 2.0: Template based crystal structure prediction with improved oxidation state prediction and chemistry heuristics." Computational Materials Science 261 (2026): 114317.
 ```
 
 
