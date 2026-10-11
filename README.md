@@ -6,7 +6,7 @@ Wei, Lai, Rongzhi Dong, Nihang Fu, Sadman Sadeed Omee, and Jianjun Hu. "TCSP 2.0
 
 by <a href="http://mleg.cse.sc.edu" target="_blank">Machine Learning and Evolution Laboratory</a>, University of South Carolina.
 
-#### Check out our recently released TCSP 3.0 with >20% performance improvement. [TCSP 3.0](https://github.com/usccolumbia/TCSPV3)
+#### Check our recently released TCSP 3.0 with >20% performance improvement. [TCSP 3.0](https://github.com/usccolumbia/TCSPV3)
 #### Check our original paper: [TCSP 1.0](https://pubs.acs.org/doi/full/10.1021/acs.inorgchem.1c03879)
 
 ### Python Dependencies
